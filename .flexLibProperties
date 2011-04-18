@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties version="1">
+  <includeClasses>
+    <classEntry path="org.humbleui.WeakReference"/>
+    <classEntry path="org.humbleui.IRemoteObjectProxy"/>
+    <classEntry path="org.humbleui.IMediatorLifecycle"/>
+    <classEntry path="org.humbleui.ApplicationWeaver"/>
+    <classEntry path="org.humbleui.MediatorEventDispatcher"/>
+    <classEntry path="org.humbleui.StageEventDispatcher"/>
+    <classEntry path="org.humbleui.BootstrapProperties"/>
+    <classEntry path="org.humbleui.RemoteObjectRepository"/>
+    <classEntry path="org.humbleui.ObjectEvent"/>
+    <classEntry path="org.humbleui.RemoteObjectProxy"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

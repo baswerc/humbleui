@@ -1,0 +1,29 @@
+<project name="HumbleUI">
+
+  <property name="FLEX_HOME" value="/Applications/Adobe Flex Builder 3 Plug-in/sdks/3.3.0" />
+  <property name="ASDOC_EXEC" value="${FLEX_HOME}/bin/asdoc"/>
+
+  <taskdef name="compc" classname="flex.ant.CompcTask" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+
+  <target name="prepare-dist">
+    <delete dir="dist" failonerror="false" />
+    <mkdir dir="dist" />
+  </target>
+
+  <target name="Compile" depends="prepare-dist" description="Compiles and creates HumbleUI.swc file.">
+    <compc output="dist/HumbleUI.swc">
+      <include-sources dir="src" includes="*" />
+    </compc>
+    <echo>SWC file generated at dist/HumbleUI.swc</echo>
+  </target>
+
+  <target name="ASDocs" description="Run the ASDoc executable and generate the ASDocs to the new output folder">
+    <exec executable="${ASDOC_EXEC}" failonerror="true">
+      <arg value="-doc-sources"/>
+      <arg value="src"/>
+      <arg value="-output"/>
+      <arg value="docs"/>
+    </exec>
+  </target>
+</project>
